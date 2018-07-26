@@ -29,27 +29,27 @@ INC	:= -I/usr/include/python2.6
 
 
 
-sources  := measurement.cc electron.cc Bcalc.c
+sources  := src/measurement.cc src/electron.cc src/Bcalc.c
 objects  := $(sources:.cc=.o)  # Objektdateien sind die
 
 
-shsources	:= electron.cc Bcalc.c
+shsources	:= src/electron.cc src/Bcalc.c
 shobjects	:= $(shsources:.cc=.o)  # Objektdateien sind die
 
 #----------------------------------------------------------------------------
 
 
 findMomentum: $(objects)
-	$(LD) $(LDFLAGS) -o findMomentum $(objects) findMomentum.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS) && rm *.o
+	$(LD) $(LDFLAGS) -o findMomentum $(objects) src/findMomentum.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS) && rm src/*.o
 
 getDeflection: $(objects)
-	$(LD) $(LDFLAGS) -o getDeflection $(objects) getDeflection.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS) && rm *.o
+	$(LD) $(LDFLAGS) -o getDeflection $(objects) src/getDeflection.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS) && rm src/*.o
 
 
 cc: $(objects)
-	$(LD) $(LDFLAGS) -o findMomentum $(objects) findMomentum.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS)
-	$(LD) $(LDFLAGS) -o getDeflection $(objects) getDeflection.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS) && rm *.o
+	$(LD) $(LDFLAGS) -o findMomentum $(objects) src/findMomentum.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS)
+	$(LD) $(LDFLAGS) -o getDeflection $(objects) src/getDeflection.cc $(CXXFLAGS) $(LIB) $(INC) $(LDLIBS) && rm src/*.o
 
 shared: $(shobjects)
-	$(LD) $(LDFLAGS) -o measurement.so $(shobjects) measurement.cc $(SHCXXFLAGS) $(LIB) $(INC) $(SHLDLIBS)  && rm *.o
+	$(LD) $(LDFLAGS) -o measurement.so $(shobjects) src/measurement.cc $(SHCXXFLAGS) $(LIB) $(INC) $(SHLDLIBS)  && rm src/*.o
 

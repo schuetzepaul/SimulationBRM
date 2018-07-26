@@ -11,7 +11,7 @@
 #include <vector>
 #include <string>
 
-#include "electron.h"
+#include "../include/electron.h"
 
 
 using namespace std;

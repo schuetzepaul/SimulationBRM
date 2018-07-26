@@ -12,7 +12,7 @@
 #include <string>
 #include <sys/time.h>
 
-#include "electron.h"
+#include "../include/electron.h"
 
 using namespace std;
 

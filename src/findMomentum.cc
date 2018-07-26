@@ -1,5 +1,5 @@
 #ifndef MEASUREMENT_H
-#include "measurement.h"
+#include "../include/measurement.h"
 #endif
 
 int main(int argc, char *argv[]){
