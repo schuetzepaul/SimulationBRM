@@ -27,7 +27,7 @@ for separate compilations.
 
 Calculate the deflection (position in x and angle) for a given setup:
 ```
-./BRMeval [momentum in GeV] [magnet current in A] [end of tracking in mm]
+./getDeflection [momentum in GeV] [magnet current in A] [end of tracking in mm]
 ```
 Note: The end of tracking is defined in reference to the center of the magnet (z=1166 mm in the magnetic field map). The magnetic field (map) extents to (center + ~1160 mm).
 
