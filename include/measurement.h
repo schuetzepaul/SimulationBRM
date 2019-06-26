@@ -19,6 +19,7 @@ class Measurement{
 
   Measurement(std::string){};
   Measurement(double, double);
+  Measurement(double, double, double);
 
   void findMomentum();
   double getMomentum(){return momentum;};
@@ -33,6 +34,8 @@ class Measurement{
   double momentum;
   double current;
 
+  double zrange;
+  
   double precision;
   
   double angleIn;
