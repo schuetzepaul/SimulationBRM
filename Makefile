@@ -25,7 +25,7 @@ LDLIBS   := -lpthread -lm -ldl -lpython2.7 -lboost_python
 #LIB	:= -L/$(ROOTSYS)/lib/
 
 #INC	:=-I/$(ROOTSYS)/include/ -I/usr/include/python2.6
-INC	:= -I/usr/include/python2.6
+INC	:= -I/usr/include/python2.7
 
 
 
