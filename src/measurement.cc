@@ -6,6 +6,18 @@ using namespace std;
 Measurement::Measurement(double icurrent, double ikink){
   current = icurrent;
   kink = ikink;
+  zrange = 2500.;
+  haveMomentum = false;
+
+  verbose = false;
+
+  precision = 0.0001;
+}
+
+Measurement::Measurement(double icurrent, double ikink, double irange){
+  current = icurrent;
+  kink = ikink;
+  zrange = irange + 1166.;
   haveMomentum = false;
 
   verbose = false;
@@ -31,7 +43,7 @@ void Measurement::findMomentum(){
     
     Electron* elec = new Electron(cmomentum, current, angleIn);
     elec->setPrecisionZ(0.0002);
-    elec->setZrange(2500.);
+    elec->setZrange(zrange);
 
     
     elec->deflection();
