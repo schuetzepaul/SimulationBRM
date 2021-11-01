@@ -42,6 +42,12 @@ int main(int argc, char *argv[]){
         p=atof(argv[1]);
 	I=atof(argv[2]);
 	zstop=atof(argv[3]);
+    }else if (argc==6) {
+        p=atof(argv[1]);
+	I=atof(argv[2]);
+	zstop=atof(argv[3]);
+	xin=atof(argv[4]);
+	thetain=atof(argv[5]);
     }else{
         cout << "Usage:" << endl << "./BRMeval [momentum in GeV] [magnet current in A] [end of tracking in mm]" << endl;
         cout << "Note: The end of tracking is defined in reference to the center of the magnet" << endl;
